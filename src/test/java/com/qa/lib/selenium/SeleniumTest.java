@@ -20,6 +20,7 @@ import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 
 @SpringBootTest(webEnvironment = WebEnvironment.DEFINED_PORT)
 @TestMethodOrder(OrderAnnotation.class)
+// DO NOT CALL IT data.sql/schema.sql
 @Sql(scripts = { "classpath:person-schema.sql",
 		"classpath:person-data.sql" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 public class SeleniumTest {
